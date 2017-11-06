@@ -6,6 +6,8 @@ services:
     volumes:
       - './config:/etc/gitlab-runner'
       - '/var/run/docker.sock:/var/run/docker.sock:ro'
+    networks:
+      - "dev"
 networks:
   dev:
     driver: bridge
