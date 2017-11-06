@@ -1,0 +1,55 @@
+version: '3'
+services:
+  gitlab:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: '111.9.116.162'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://111.9.116.162'
+        gitlab_rails['gitlab_email_enabled'] = true
+        gitlab_rails['gitlab_email_from'] = '120011676@qq.com'
+        gitlab_rails['gitlab_email_display_name'] = 'gitlab maranager'
+        gitlab_rails['gitlab_email_reply_to'] = '120011676@qq.com'
+        gitlab_rails['gitlab_email_subject_suffix'] = 'gitlab-'
+        gitlab_rails['smtp_enable'] = true
+        gitlab_rails['smtp_address'] = "smtp.qq.com"
+        gitlab_rails['smtp_port'] = 465
+        gitlab_rails['smtp_user_name'] = "120011676@qq.com"
+        gitlab_rails['smtp_password'] = "hrllwxgfmtqkbhbh"
+        gitlab_rails['smtp_domain'] = "qq.com"
+        gitlab_rails['smtp_authentication'] = "login"
+        gitlab_rails['smtp_enable_starttls_auto'] = true
+        gitlab_rails['smtp_tls'] = true
+    volumes:
+      - './gitlab/config:/etc/gitlab'
+      - './gitlab/logs:/var/log/gitlab'
+      - './gitlab/data:/var/opt/gitlab'
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    networks:
+      - "dev"
+  runner:
+    image: gitlab/gitlab-runner
+    restart: always
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
+      - './runner/config:/etc/gitlab-runner'
+    networks:
+      - "dev"
+  jenkins:
+    image: jenkins/jenkins:lts
+    restart: always
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
+      - './jenkins/home:/var/jenkins_home'
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
