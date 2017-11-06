@@ -1,0 +1,20 @@
+version: '3'
+services:
+  mysql:
+    image: mysql:8.0.3
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - TZ=Asia/Shanghai
+      - MYSQL_ROOT_PASSWORD==[;.-pl,0okm
+      - MYSQL_DATABASE=sonar
+    command:  --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-time-zone='+8:00' --log-timestamps=SYSTEM
+    volumes:
+      - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/data:/var/lib/mysql
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
