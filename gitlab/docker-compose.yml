@@ -1,29 +1,34 @@
-web:
-  image: 'gitlab/gitlab-ce:latest'
-  restart: always
-  hostname: '111.9.116.162'
-  environment:
-    GITLAB_OMNIBUS_CONFIG: |
-      external_url 'http://111.9.116.162'
-      gitlab_rails['gitlab_email_enabled'] = true
-      gitlab_rails['gitlab_email_from'] = '120011676@qq.com'
-      gitlab_rails['gitlab_email_display_name'] = 'gitlab maranager'
-      gitlab_rails['gitlab_email_reply_to'] = '120011676@qq.com'
-      gitlab_rails['gitlab_email_subject_suffix'] = 'gitlab-'
-      gitlab_rails['smtp_enable'] = true
-      gitlab_rails['smtp_address'] = "smtp.qq.com"
-      gitlab_rails['smtp_port'] = 465
-      gitlab_rails['smtp_user_name'] = "120011676@qq.com"
-      gitlab_rails['smtp_password'] = "hrllwxgfmtqkbhbh"
-      gitlab_rails['smtp_domain'] = "qq.com"
-      gitlab_rails['smtp_authentication'] = "login"
-      gitlab_rails['smtp_enable_starttls_auto'] = true
-      gitlab_rails['smtp_tls'] = true
-  ports:
-    - '80:80'
-    - '443:443'
-    - '22:22'
-  volumes:
-    - './config:/etc/gitlab'
-    - './logs:/var/log/gitlab'
-    - './data:/var/opt/gitlab'
+version: '3'
+services:
+  gitlab:
+    image: 'gitlab/gitlab-ce:latest'
+    restart: always
+    hostname: '111.9.116.162'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://111.9.116.162'
+        gitlab_rails['gitlab_email_enabled'] = true
+        gitlab_rails['gitlab_email_from'] = '120011676@qq.com'
+        gitlab_rails['gitlab_email_display_name'] = 'gitlab maranager'
+        gitlab_rails['gitlab_email_reply_to'] = '120011676@qq.com'
+        gitlab_rails['gitlab_email_subject_suffix'] = 'gitlab-'
+        gitlab_rails['smtp_enable'] = true
+        gitlab_rails['smtp_address'] = "smtp.qq.com"
+        gitlab_rails['smtp_port'] = 465
+        gitlab_rails['smtp_user_name'] = "120011676@qq.com"
+        gitlab_rails['smtp_password'] = "hrllwxgfmtqkbhbh"
+        gitlab_rails['smtp_domain'] = "qq.com"
+        gitlab_rails['smtp_authentication'] = "login"
+        gitlab_rails['smtp_enable_starttls_auto'] = true
+        gitlab_rails['smtp_tls'] = true
+    ports:
+      - '80:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - './config:/etc/gitlab'
+      - './logs:/var/log/gitlab'
+      - './data:/var/opt/gitlab'
+networks:
+  dev:
+    driver: bridge
