@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:1.13.6-alpine
+      volumes:
+        - './nginx/conf.d/:/etc/nginx/conf.d/:ro'
+      networks:
+        - dev
+      ports:
+        - 80:80
+networks:
+  dev:
+    driver: bridge
