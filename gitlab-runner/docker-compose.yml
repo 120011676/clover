@@ -1,0 +1,6 @@
+web:
+  image: gitlab/gitlab-runner
+  restart: always
+  volumes:
+    - './config:/etc/gitlab-runner'
+    - '/var/run/docker.sock:/var/run/docker.sock'
