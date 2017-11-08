@@ -1,0 +1,5 @@
+gitlab-runner/config/
+gitlab/config/
+gitlab/data/
+gitlab/logs/
+jenkins/home
