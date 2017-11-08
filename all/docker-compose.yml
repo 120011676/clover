@@ -9,7 +9,7 @@ services:
         external_url 'http://111.9.116.162'
         gitlab_rails['gitlab_email_enabled'] = true
         gitlab_rails['gitlab_email_from'] = '120011676@qq.com'
-        gitlab_rails['gitlab_email_display_name'] = 'gitlab maranager'
+        gitlab_rails['gitlab_email_display_name'] = 'gitlab Administrators'
         gitlab_rails['gitlab_email_reply_to'] = '120011676@qq.com'
         gitlab_rails['gitlab_email_subject_suffix'] = 'gitlab-'
         gitlab_rails['smtp_enable'] = true
