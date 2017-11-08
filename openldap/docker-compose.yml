@@ -17,7 +17,6 @@ services:
     networks:
       - dev
     ports:
-      - 81:80
       - 389:389
 networks:
   dev:

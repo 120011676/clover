@@ -1,0 +1,17 @@
+version: '3'
+services:
+  phpldapadmin:
+    image: osixia/phpldapadmin:0.7.1
+    restart: always
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=ldap.chiqtv.cn
+      - PHPLDAPADMIN_HTTPS=false
+    volumes:
+      - './config:/container/service/phpldapadmin/assets/config'
+    networks:
+      - dev
+    ports:
+      - 6443:443
+networks:
+  dev:
+    driver: bridge
