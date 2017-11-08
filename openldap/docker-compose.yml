@@ -1,0 +1,24 @@
+version: '3'
+services:
+  nginx:
+    image: osixia/openldap:1.1.10
+    restart: always
+    environment:
+      LDAP_TLS_CRT_FILENAME=ldap.crt
+      LDAP_TLS_KEY_FILENAME=ldap.key
+      LDAP_TLS_CA_CRT_FILENAME=ldap-ca.crt
+      LDAP_ORGANISATION=changhong.com
+      LDAP_DOMAIN=chiqtv.cn
+      LDAP_ADMIN_PASSWORD=1qaz2wsx
+    volumes:
+      - './ldap:/var/lib/ldap'
+      - './config:/etc/ldap/slapd.d'
+      - './certs:/container/service/slapd/assets/certs'
+    networks:
+      - dev
+    ports:
+      - 81:80
+      - 389:389
+networks:
+  dev:
+    driver: bridge
