@@ -10,10 +10,10 @@ services:
       - LDAP_ORGANISATION=changhong.com
       - LDAP_DOMAIN=chiqtv.cn
       - LDAP_ADMIN_PASSWORD=1qaz2wsx
+      - PHPLDAPADMIN_HTTPS=false
     volumes:
       - './ldap:/var/lib/ldap'
       - './config:/etc/ldap/slapd.d'
-      - './certs:/container/service/slapd/assets/certs'
     networks:
       - dev
     ports:
