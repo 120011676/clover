@@ -6,12 +6,13 @@ services:
     hostname: '111.9.116.162'
     environment:
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'https://git.chiqtv.cn'
+        external_url 'http://git.chiqtv.cn'
         gitlab_rails['gitlab_email_enabled'] = true
         gitlab_rails['gitlab_email_from'] = '120011676@qq.com'
         gitlab_rails['gitlab_email_display_name'] = 'Gitlab Administrators'
         gitlab_rails['gitlab_email_reply_to'] = '120011676@qq.com'
         gitlab_rails['gitlab_email_subject_suffix'] = 'gitlab-'
+        
         gitlab_rails['smtp_enable'] = true
         gitlab_rails['smtp_address'] = "smtp.qq.com"
         gitlab_rails['smtp_port'] = 465
