@@ -3,3 +3,5 @@ gitlab/config/
 gitlab/data/
 gitlab/logs/
 jenkins/home
+openldap/config
+openldap/ldap
