@@ -6,8 +6,6 @@ services:
     environment:
       - PHPLDAPADMIN_LDAP_HOSTS=ldap.chiqtv.cn
       - PHPLDAPADMIN_HTTPS=false
-    volumes:
-      - './config:/container/service/phpldapadmin/assets/config'
     networks:
       - dev
     ports:
