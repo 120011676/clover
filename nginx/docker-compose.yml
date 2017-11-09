@@ -4,7 +4,7 @@ services:
     image: nginx:1.13.6-alpine
     restart: always
     volumes:
-      - './nginx/conf.d/:/etc/nginx/conf.d/:ro'
+      - './conf.d/:/etc/nginx/conf.d/:ro'
     networks:
       - dev
     ports:

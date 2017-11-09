@@ -29,7 +29,7 @@ services:
             host: 'ldap.chiqtv.cn'
             port: 389
             uid: 'uid'
-            bind_dn: 'ou\=users,dc\=changhong,dc\=com'
+            bind_dn: 'ou\=admin,dc\=chiqtv,dc\=cn'
             password: '1qaz2wsx'
         #     encryption: 'plain' # "start_tls" or "simple_tls" or "plain"
         #     verify_certificates: true
@@ -79,8 +79,7 @@ services:
         #     sync_ssh_keys: false
         EOS
     ports:
-      - '80:80'
-      - '443:443'
+      - '180:80'
       - '22:22'
     volumes:
       - './config:/etc/gitlab'

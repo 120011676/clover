@@ -9,7 +9,7 @@ services:
     networks:
       - dev
     ports:
-      - 80:80
+      - 280:80
 networks:
   dev:
     driver: bridge

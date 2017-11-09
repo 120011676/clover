@@ -18,7 +18,6 @@ services:
       - dev
     ports:
       - 389:389
-      - 636:636
 networks:
   dev:
     driver: bridge
