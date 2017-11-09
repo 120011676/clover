@@ -7,7 +7,7 @@ services:
       # - LDAP_TLS_CRT_FILENAME=ldap.crt
       # - LDAP_TLS_KEY_FILENAME=ldap.key
       # - LDAP_TLS_CA_CRT_FILENAME=ldap-ca.crt
-      - LDAP_ORGANISATION=changhong.com
+      - LDAP_ORGANISATION=chiqtv.cn
       - LDAP_DOMAIN=chiqtv.cn
       - LDAP_ADMIN_PASSWORD=1qaz2wsx
       - PHPLDAPADMIN_HTTPS=false
