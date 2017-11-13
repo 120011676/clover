@@ -30,13 +30,13 @@ services:
             host: 'ldap.chiqtv.cn'
             port: 389
             uid: 'uid'
-            bind_dn: 'dc=chiqtv,dc=cn'
+            bind_dn: 'ou=admin,dc=chiqtv,dc=cn'
             password: '1qaz2wsx'
             encryption: 'plain'
             active_directory: true
             allow_username_or_email_login: false
             block_auto_created_users: false
-            base: 'dc=chiqtv,dc=cn'
+            base: 'ou=hlj,cn=dev,cn=test'
             user_filter: ''
             attributes:
               username: ['uid', 'userid', 'sAMAccountName']
