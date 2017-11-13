@@ -25,59 +25,24 @@ services:
         
         gitlab_rails['ldap_enabled'] = true
         gitlab_rails['ldap_servers'] = YAML.load <<-'EOS'
-          main: # 'main' is the GitLab 'provider ID' of this LDAP server
+          main:
             label: 'LDAP'
             host: 'ldap.chiqtv.cn'
             port: 389
             uid: 'uid'
-            bind_dn: 'ou\=admin,dc\=chiqtv,dc\=cn'
+            bind_dn: 'dc=chiqtv,dc=cn'
             password: '1qaz2wsx'
-        #     encryption: 'plain' # "start_tls" or "simple_tls" or "plain"
-        #     verify_certificates: true
-        #     ca_file: ''
-        #     ssl_version: ''
-        #     active_directory: true
-        #     allow_username_or_email_login: false
-        #     block_auto_created_users: false
-        #     base: ''
-        #     user_filter: ''
-        #     attributes:
-        #       username: ['uid', 'userid', 'sAMAccountName']
-        #       email:    ['mail', 'email', 'userPrincipalName']
-        #       name:       'cn'
-        #       first_name: 'givenName'
-        #       last_name:  'sn'
-        #     ## EE only
-        #     group_base: ''
-        #     admin_group: ''
-        #     sync_ssh_keys: false
-        #
-        #   secondary: # 'secondary' is the GitLab 'provider ID' of second LDAP server
-        #     label: 'LDAP'
-        #     host: '_your_ldap_server'
-        #     port: 389
-        #     uid: 'sAMAccountName'
-        #     bind_dn: '_the_full_dn_of_the_user_you_will_bind_with'
-        #     password: '_the_password_of_the_bind_user'
-        #     encryption: 'plain' # "start_tls" or "simple_tls" or "plain"
-        #     verify_certificates: true
-        #     ca_file: ''
-        #     ssl_version: ''
-        #     active_directory: true
-        #     allow_username_or_email_login: false
-        #     block_auto_created_users: false
-        #     base: ''
-        #     user_filter: ''
-        #     attributes:
-        #       username: ['uid', 'userid', 'sAMAccountName']
-        #       email:    ['mail', 'email', 'userPrincipalName']
-        #       name:       'cn'
-        #       first_name: 'givenName'
-        #       last_name:  'sn'
-        #     ## EE only
-        #     group_base: ''
-        #     admin_group: ''
-        #     sync_ssh_keys: false
+            active_directory: true
+            allow_username_or_email_login: false
+            block_auto_created_users: false
+            base: 'dc=chiqtv,dc=cn'
+            user_filter: ''
+            attributes:
+              username: ['uid', 'userid', 'sAMAccountName']
+              email:    ['mail', 'email', 'userPrincipalName']
+              name:       'cn'
+              first_name: 'givenName'
+              last_name:  'sn'
         EOS
     ports:
       - '180:80'
