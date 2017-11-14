@@ -36,7 +36,7 @@ services:
             active_directory: true
             allow_username_or_email_login: false
             block_auto_created_users: false
-            base: 'ou=hlj,cn=dev,cn=test'
+            base: 'ou=users,ou=hlj,dc=chiqtv,dc=cn'
             user_filter: ''
             attributes:
               username: ['uid', 'userid', 'sAMAccountName']
