@@ -34,7 +34,7 @@ services:
             password: '1qaz2wsx'
             encryption: 'plain'
             active_directory: true
-            allow_username_or_email_login: false
+            allow_username_or_email_login: true
             block_auto_created_users: false
             base: 'ou=users,ou=hlj,dc=chiqtv,dc=cn'
             user_filter: ''
