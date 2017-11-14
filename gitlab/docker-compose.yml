@@ -40,8 +40,8 @@ services:
             group_base: 'ou=groups,ou=hlj,dc=chiqtv,dc=cn'
             user_filter: ''
             attributes:
-              username: ['cn','uid', 'userid', 'sAMAccountName']
-              email:    ['mail', 'email', 'userPrincipalName']
+              username: ['cn']
+              email:    ['email']
               name:       'cn'
               first_name: 'givenName'
               last_name:  'sn'
