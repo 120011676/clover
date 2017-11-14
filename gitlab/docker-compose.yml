@@ -29,7 +29,7 @@ services:
             label: 'LDAP'
             host: 'ldap.chiqtv.cn'
             port: 389
-            uid: 'uid'
+            uid: 'cn'
             bind_dn: 'cn=admin,dc=chiqtv,dc=cn'
             password: '1qaz2wsx'
             encryption: 'plain'
