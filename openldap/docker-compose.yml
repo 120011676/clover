@@ -4,12 +4,9 @@ services:
     image: osixia/openldap:1.1.10
     restart: always
     environment:
-      # - LDAP_TLS_CRT_FILENAME=ldap.crt
-      # - LDAP_TLS_KEY_FILENAME=ldap.key
-      # - LDAP_TLS_CA_CRT_FILENAME=ldap-ca.crt
       - LDAP_ORGANISATION=chiqtv.cn
       - LDAP_DOMAIN=chiqtv.cn
-      - LDAP_ADMIN_PASSWORD=1qaz2wsx
+      - LDAP_ADMIN_PASSWORD==[;.-pl,0okm
       - LDAP_TLS=false
     volumes:
       - './ldap:/var/lib/ldap'

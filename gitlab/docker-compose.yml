@@ -31,7 +31,7 @@ services:
             port: 389
             uid: 'uid'
             bind_dn: 'cn=admin,dc=chiqtv,dc=cn'
-            password: '1qaz2wsx'
+            password: '=[;.-pl,0okm'
             encryption: 'plain'
             active_directory: true
             allow_username_or_email_login: true
