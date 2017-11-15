@@ -29,7 +29,7 @@ services:
             label: 'LDAP'
             host: 'ldap.chiqtv.cn'
             port: 389
-            uid: 'cn'
+            uid: 'uid'
             bind_dn: 'cn=admin,dc=chiqtv,dc=cn'
             password: '1qaz2wsx'
             encryption: 'plain'
@@ -40,8 +40,8 @@ services:
             group_base: 'ou=groups,ou=hlj,dc=chiqtv,dc=cn'
             user_filter: ''
             attributes:
-              username: ['cn']
-              email:    ['email']
+              username: ['uid', 'userid', 'sAMAccountName','cn']
+              email:    ['mail', 'email', 'userPrincipalName']
               name:       'cn'
               first_name: 'givenName'
               last_name:  'sn'
