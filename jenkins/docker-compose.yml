@@ -1,10 +1,11 @@
 version: '3'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: jenkinsci/blueocean
     restart: always
     volumes:
       - './home:/var/jenkins_home'
+      - '/var/run/docker.sock:/var/run/docker.sock'
     ports:
       - '8080:8080'
       - '50000:50000'
