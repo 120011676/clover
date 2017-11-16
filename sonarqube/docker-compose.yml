@@ -1,22 +1,10 @@
 version: '3'
 services:
-  mysql:
-    image: mysql
-    restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD==[;.-pl,0okm
-      - TZ=Asia/Shanghai
-    volumes:
-      - ./mysql/conf.d:/etc/mysql/conf.d
-      - ./mysql/data:/var/lib/mysql
-    command:  --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-time-zone='+8:00' --log-timestamps=SYSTEM
-    networks:
-      - "dev"
   sonarqube:
     image: sonarqube:alpine
     restart: always
     environment:
-      - SONARQUBE_JDBC_URL=jdbc:mysql://mysql:3306/sonar?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8
+      - SONARQUBE_JDBC_URL=jdbc:mysql://mysql:3306/sonar?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance
       - SONARQUBE_JDBC_USERNAME=root
       - SONARQUBE_JDBC_PASSWORD==[;.-pl,0okm
     networks:
