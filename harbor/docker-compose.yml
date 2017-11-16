@@ -118,8 +118,8 @@ services:
     networks:
       - harbor
     ports:
-      - 380:80
-      - 3443:443
+      - 580:80
+      - 5443:443
       - 4443:4443
     depends_on:
       - mysql
