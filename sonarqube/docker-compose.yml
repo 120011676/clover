@@ -13,7 +13,7 @@ services:
     image: sonarqube:alpine
     restart: always
     environment:
-      - SONARQUBE_JDBC_URL=jdbc:mysql://mysql:3306/sonar?createDatabaseIfNotExist=true
+      - SONARQUBE_JDBC_URL=jdbc:mysql://mysql:3306/sonar?createDatabaseIfNotExist=true&useUnicode=true
       - SONARQUBE_JDBC_USERNAME=root
       - SONARQUBE_JDBC_PASSWORD==[;.-pl,0okm
     networks:
