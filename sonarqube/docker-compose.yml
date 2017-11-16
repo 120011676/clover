@@ -3,12 +3,8 @@ services:
   nginx:
     image: sonarqube:alpine
     restart: always
-    environment:
-      SONARQUBE_JDBC_URL=jdbc:mysql://mysql/sonar
-      SONARQUBE_JDBC_USERNAME=root
-      SONARQUBE_JDBC_PASSWORD==[;.-pl,0okm
     volumes:
-      - './nginx/conf.d/:/etc/nginx/conf.d/:ro'
+      - './sonarqube:/opt/sonarqube'
     networks:
       - dev
     ports:
