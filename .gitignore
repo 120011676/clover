@@ -3,6 +3,7 @@ gitlab-runner/config/
 gitlab/config/
 gitlab/data/
 gitlab/logs/
-jenkins/home
-openldap/config
-openldap/ldap
+jenkins/home/
+openldap/config/
+openldap/ldap/
+mysql/mysql/
