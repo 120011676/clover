@@ -1,7 +1,7 @@
 version: '3'
 services:
   sonarqube:
-    image: sonarqube
+    image: sonarqube:alpine
     restart: always
     environment:
       - SONARQUBE_JDBC_URL=jdbc:mysql://sonarqube.chiqtv.cn:3306/sonar?useSSL=true&createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&k&autoReconnect=true&autoReconnectForPools=true&failOverReadOnly=false
