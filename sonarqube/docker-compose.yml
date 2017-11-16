@@ -3,8 +3,10 @@ services:
   sonarqube:
     image: sonarqube
     restart: always
-    volumes:
-      - './sonarqube:/opt/sonarqube'
+    environment:
+      - SONARQUBE_JDBC_URL=jdbc:mysql://sonarqube.chiqtv.cn:3306/sonar?useSSL=true&createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&k&autoReconnect=true&autoReconnectForPools=true&failOverReadOnly=false
+      - SONARQUBE_JDBC_USERNAME=root
+      - SONARQUBE_JDBC_PASSWORD==[;.-pl,0okm
     networks:
       - dev
     ports:
