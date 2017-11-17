@@ -1,7 +1,7 @@
 version: '3'
 services:
   jenkins:
-    image: jenkinsci/blueocean
+    image: jenkins/jenkins:lts
     restart: always
     volumes:
       - './home:/var/jenkins_home'
