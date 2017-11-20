@@ -6,7 +6,7 @@ services:
     environment:
       - LDAP_ORGANISATION=chiqtv.cn
       - LDAP_DOMAIN=chiqtv.cn
-      - LDAP_ADMIN_PASSWORD==[;.-pl,0okm
+      - LDAP_ADMIN_PASSWORD==[;._PL<0okm
       - LDAP_TLS=false
     volumes:
       - './ldap:/var/lib/ldap'
