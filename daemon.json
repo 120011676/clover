@@ -1,0 +1,13 @@
+{
+  "debug": true,
+  "tls": true,
+  "tlscert": "/opt/clover/nginx/conf.d/cert/registry.chiqtv.cn.pem",
+  "tlskey": "/opt/clover/nginx/conf.d/cert/registry.chiqtv.cn.key",
+  "hosts": [
+    "fd://",
+    "tcp://0.0.0.0:2376"
+  ],
+  "registry-mirrors": [
+    "http://074f6be2.m.daocloud.io"
+  ]
+}
