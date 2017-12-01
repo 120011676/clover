@@ -11,3 +11,4 @@ harbor/common/config/
 harbor/data/
 harbor/log/
 nginx/html/md
+nginx/html/index.md
