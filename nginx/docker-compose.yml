@@ -5,6 +5,7 @@ services:
     restart: always
     volumes:
       - './conf.d/:/etc/nginx/conf.d/:ro'
+      - './html:/usr/share/nginx/html'
     networks:
       - dev
     ports:
