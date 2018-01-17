@@ -1,0 +1,20 @@
+version: '3'
+services:
+  scylladb:
+    image: scylladb/scylla
+    restart: always
+    volumes:
+      - './scylla:/var/lib/scylla'
+    command: --developer-mode=0
+    networks:
+      - dev
+    ports:
+      - 7000:7000
+      - 7001:7001
+      - 9160:9160
+      - 9180:9180
+      - 9042:9042
+      - 10000:10000
+networks:
+  dev:
+    driver: bridge
