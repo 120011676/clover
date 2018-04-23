@@ -3,8 +3,8 @@ services:
   scylladb:
     image: scylladb/scylla
     restart: always
-    volumes:
-      - './scylla:/var/lib/scylla'
+#    volumes:
+#      - './scylla:/var/lib/scylla'
     command: --developer-mode=0
     networks:
       - dev
