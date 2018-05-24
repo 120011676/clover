@@ -1,0 +1,18 @@
+version: '3'
+services:
+  redis:
+    image: openjdk:alpine
+    restart: always
+    volumes:
+      - ./jmeter:/jmeter
+    working_dir: /jmeter
+    command: ./jmeter-server
+    expose:
+      - 1099
+    ports:
+      - 1099:1099
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge

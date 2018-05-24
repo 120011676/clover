@@ -13,5 +13,6 @@
 /nginx/html/md
 /nginx/html/index.md
 /scylla/scylla/
+/jmeter-server/jmeter/
 !scylla/scylla/data/.gitignore
 !scylla/scylla/commitlog/.gitignore
