@@ -1,11 +1,11 @@
 version: '3'
 services:
-  redis:
+  jmeter-server:
     image: openjdk:alpine
     restart: always
     volumes:
       - ./jmeter:/jmeter
-    working_dir: /jmeter
+    working_dir: /jmeter/bin
     command: ./jmeter-server
     expose:
       - 1099
