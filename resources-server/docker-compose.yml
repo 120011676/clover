@@ -1,0 +1,11 @@
+version: '3'
+services:
+  resources:
+    image: 120011676/resources-server
+    restart: always
+    volumes:
+      - './upload/:/var/www/html/upload'
+    expose:
+      - 80
+    ports:
+      - 9000:80
