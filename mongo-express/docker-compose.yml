@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mongo-express:
+    image: mongo-express
+    restart: always
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=
+      - ME_CONFIG_MONGODB_AUTH_DATABASE=
+      - ME_CONFIG_BASICAUTH_USERNAME=
+      - ME_CONFIG_BASICAUTH_PASSWORD=
+    ports:
+      - 8081:8081
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
