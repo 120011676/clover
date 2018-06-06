@@ -4,7 +4,11 @@ services:
     image: mongo-express
     restart: always
     environment:
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=1qaz2wsx
+      - ME_CONFIG_MONGODB_ENABLE_ADMIN=false
       - ME_CONFIG_MONGODB_SERVER=
+      - ME_CONFIG_MONGODB_PORT=27017
       - ME_CONFIG_MONGODB_AUTH_DATABASE=
       - ME_CONFIG_MONGODB_AUTH_USERNAME=
       - ME_CONFIG_MONGODB_AUTH_PASSWORD=
