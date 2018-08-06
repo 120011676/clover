@@ -3,13 +3,15 @@ services:
   mongo:
     image: mongo
     restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME: root
+      - MONGO_INITDB_ROOT_PASSWORD: =[;._PL<0okm
     volumes:
       - ./mongo/db:/data/db
     ports:
       - 27017:27017
     networks:
       - "dev"
-    command:  --auth
 networks:
   dev:
     driver: bridge
