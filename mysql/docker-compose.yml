@@ -8,7 +8,7 @@ services:
     environment:
       - TZ=Asia/Shanghai
       - MYSQL_ROOT_PASSWORD==[;._PL<0okm
-    command:  --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-time-zone='+8:00' --log-timestamps=SYSTEM --explicit_defaults_for_timestamp=1
+    command:  --character-set-server=utf8mb4 --collation-server=utf8mb4_bin --default-time-zone='+8:00' --log-timestamps=SYSTEM --explicit_defaults_for_timestamp=on
     volumes:
       - ./mysql/conf.d:/etc/mysql/conf.d
       - ./mysql/data:/var/lib/mysql
