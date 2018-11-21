@@ -7,8 +7,7 @@ services:
       - ./data:/data
     ports:
       - 6379:6379
-    command:
-      - redis-server --appendonly no --maxmemory-policy allkeys-lru --requirepass "=[;._PL<0okm"
+    command: redis-server --appendonly no --maxmemory-policy allkeys-lru --requirepass "=[;._PL<0okm"
     networks:
       - "dev"
 networks:
