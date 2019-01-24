@@ -1,15 +1,15 @@
 version: "3"
 services:
-  portainer:
-    image: portainer/portainer
-    restart: always
-#    command: -H unix:///var/run/docker.sock
+  visualizer:
+    image: rancher/rancher
+    restart: unless-stopped
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
-#      - "./data:/data"
+#      - "./rancher:/var/lib/rancher"
     deploy:
       replicas: 1
       placement:
         constraints: [node.role == manager]
     ports:
-      - "9000:9000"
+      - "9002:80"
+      - "9003:443"
