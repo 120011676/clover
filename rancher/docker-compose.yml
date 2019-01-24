@@ -1,6 +1,6 @@
 version: "3"
 services:
-  visualizer:
+  rancher:
     image: rancher/rancher
     restart: unless-stopped
     volumes:
