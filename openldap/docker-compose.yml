@@ -1,7 +1,7 @@
 version: '3'
 services:
   openldap:
-    image: osixia/openldap:1.1.10
+    image: osixia/openldap
     restart: always
     environment:
       - LDAP_ORGANISATION=chiqtv.cn
