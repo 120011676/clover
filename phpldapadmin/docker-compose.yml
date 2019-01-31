@@ -1,7 +1,7 @@
 version: '3'
 services:
   phpldapadmin:
-    image: osixia/phpldapadmin:0.7.1
+    image: osixia/phpldapadmin
     restart: always
     environment:
       - PHPLDAPADMIN_LDAP_HOSTS=ldap.chiqtv.cn
