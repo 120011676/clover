@@ -2,11 +2,13 @@ version: "3"
 services:
   visualizer:
     image: dockersamples/visualizer
-    restart: always
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
     deploy:
       replicas: 1
+      mode: replicated
+      restart_policy:
+        restart: always
       placement:
         constraints: [node.role == manager]
     ports:

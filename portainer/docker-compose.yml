@@ -2,13 +2,16 @@ version: "3"
 services:
   portainer:
     image: portainer/portainer
-    restart: always
+#    restart: always
 #    command: -H unix:///var/run/docker.sock
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
 #      - "./data:/data"
     deploy:
       replicas: 1
+      mode: replicated
+      restart_policy:
+        restart: always
       placement:
         constraints: [node.role == manager]
     ports:
