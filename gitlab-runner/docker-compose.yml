@@ -1,7 +1,7 @@
 version: '3'
 services:
   runner:
-    image: gitlab/gitlab-runner
+    image: gitlab/gitlab-runner:alpine
     restart: always
     volumes:
       - './config:/etc/gitlab-runner'
