@@ -11,7 +11,7 @@ services:
       replicas: 1
       mode: replicated
       restart_policy:
-        restart: always
+        condition: always
       placement:
         constraints: [node.role == manager]
     ports:
