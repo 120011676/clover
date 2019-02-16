@@ -11,7 +11,8 @@ services:
       replicas: 1
       mode: replicated
       restart_policy:
-        condition: always
+#  none、on-failure 以及any(默认) 
+        condition: on-failure
       placement:
         constraints: [node.role == manager]
     ports:
