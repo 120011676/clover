@@ -1,0 +1,14 @@
+version: '3'
+services:
+  minio:
+    image: minio
+    restart: always
+    volumes:
+      - './data:/data'
+    networks:
+      - dev
+    ports:
+      - 9000:9000
+networks:
+  dev:
+    driver: bridge
