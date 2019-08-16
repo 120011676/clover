@@ -5,6 +5,10 @@ services:
     restart: always
     volumes:
       - './data:/data'
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: =[;._PL<0okm
+    command: server
     networks:
       - dev
     ports:
