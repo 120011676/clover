@@ -1,7 +1,7 @@
 version: '3'
 services:
   minio:
-    image: minio
+    image: minio/minio
     restart: always
     volumes:
       - './data:/data'
