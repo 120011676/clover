@@ -1,0 +1,18 @@
+version: '3'
+services:
+  minio:
+    image: minio/minio
+    restart: always
+    volumes:
+      - ./data:/data
+      - ./.minio:/root/.minio
+    environment:
+      - MINIO_ACCESS_KEY=minio
+      - MYSQL_ROOT_PASSWORD==[;._PL<0okm
+    ports:
+      - 9000:9000
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
