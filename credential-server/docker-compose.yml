@@ -1,0 +1,11 @@
+services:
+  credential-server:
+    image: 120011676/credential-server
+    restart: always
+    environment:
+      - REDIS_HOST=10.129.4.12
+      - REDIS_PASSWORD==[;._PL<0okm
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
