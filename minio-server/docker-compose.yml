@@ -1,0 +1,14 @@
+version: "3"
+services:
+  credential-server:
+    image: 120011676/minio-server
+    restart: always
+    environment:
+      - MINIO_ENDPOINT=http://10.129.4.12:9000
+      - MINIO_ACCESSKEY=minio
+      - MINIO_SECRETKEY==[;._PL<0okm
+      - MINIO_BUCKET=industry
+    expose:
+      - 8080
+    ports:
+      - 7000:8080
