@@ -1,3 +1,4 @@
+version: "3"
 services:
   credential-server:
     image: 120011676/credential-server
