@@ -4,9 +4,14 @@ services:
     image: sonarqube:alpine
     restart: always
     environment:
-      - SONARQUBE_JDBC_URL=jdbc:mysql://sonarqube.chiqtv.cn:3306/sonar?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance&useSSL=false
-      - SONARQUBE_JDBC_USERNAME=root
-      - SONARQUBE_JDBC_PASSWORD==[;.-pl,0okm
+      - sonar.jdbc.url=jdbc:postgresql://localhost/sonar
+      - sonar.jdbc.username=root
+      - sonar.jdbc.password==[;.-pl,0okm
+    volumes:
+      - ./conf:/opt/sonarqube/conf
+      - ./extensions:/opt/sonarqube/extensions
+      - ./logs:/opt/sonarqube/logs
+      - ./data:/opt/sonarqube/data
     networks:
       - dev
     ports:
