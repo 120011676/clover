@@ -7,7 +7,7 @@ services:
       - TZ=Asia/Shanghai
     volumes:
       - ./nexus-data:/nexus-data
-     ports:
+    ports:
       - 8081:8081
     networks:
       - "dev"
