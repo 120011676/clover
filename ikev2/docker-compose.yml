@@ -1,0 +1,18 @@
+version: '3'
+services:
+  ikev2:
+    image: gaomd/ikev2-vpn-server
+    restart: always
+    privileged: true
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./nexus-data:/nexus-data
+    ports:
+      - 500:500/udp
+      - 4500:4500/udp
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
