@@ -6,8 +6,6 @@ services:
     privileged: true
     environment:
       - TZ=Asia/Shanghai
-    volumes:
-      - ./nexus-data:/nexus-data
     ports:
       - 500:500/udp
       - 4500:4500/udp
