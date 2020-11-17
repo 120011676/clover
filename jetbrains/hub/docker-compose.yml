@@ -1,0 +1,15 @@
+version: '3'
+services:
+  jetbrains_hub:
+    name: hub-server-instance
+    image: jetbrains/hub:2020.1.12669
+    restart: always
+    volumes:
+      - './hub:/opt/hub'
+    ports:
+      - '8080:8080'
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
