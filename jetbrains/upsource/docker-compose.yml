@@ -1,7 +1,7 @@
 version: '3'
 services:
   jetbrains_upsource:
-    name: upsource-server-instance
+    container_name: upsource-server-instance
     image: jetbrains/upsource:2020.1.1815
     restart: always
     volumes:

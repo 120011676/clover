@@ -1,7 +1,7 @@
 version: '3'
 services:
   jetbrains_teamcity:
-    name: teamcity-server-instance
+    container_name: teamcity-server-instance
     image: jetbrains/teamcity-server
     restart: always
     volumes:
