@@ -1,0 +1,18 @@
+version: '3'
+services:
+  jetbrains_upsource:
+    name: upsource-server-instance
+    image: jetbrains/upsource:2020.1.1815
+    restart: always
+    volumes:
+      - './data:/opt/hub/data'
+      - './conf:/opt/hub/conf'
+      - './logs:/opt/hub/logs'
+      - './backups:/opt/hub/backups'
+    ports:
+      - '8080:8080'
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
