@@ -5,7 +5,10 @@ services:
     image: jetbrains/hub:2020.1.12669
     restart: always
     volumes:
-      - './hub:/opt/hub'
+      - './data:/opt/hub/data'
+      - './conf:/opt/hub/conf'
+      - './logs:/opt/hub/logs'
+      - './backups:/opt/hub/backups'
     ports:
       - '8080:8080'
     networks:
