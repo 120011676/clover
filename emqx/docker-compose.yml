@@ -1,0 +1,17 @@
+version: '3'
+services:
+  emqx:
+    image: emqx/emqx:4.3.7
+    restart: always
+    ports:
+      - 1883:1883
+      - 8081:8081
+      - 8083:8083
+      - 8084:8084
+      - 8883:8883
+      - 18083:18083
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
