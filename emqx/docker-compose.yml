@@ -3,6 +3,8 @@ services:
   emqx:
     image: emqx/emqx:4.3.7-alpine-amd64
     restart: always
+    environment:
+      - EMQX_ALLOW_ANONYMOUS=false
     ports:
       - 1883:1883
       - 8081:8081
