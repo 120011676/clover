@@ -2,7 +2,7 @@ version: '3'
 services:
   jetbrains_hub:
     container_name: hub-server-instance
-    image: jetbrains/hub:2020.1.12669
+    image: jetbrains/hub:2022.1.14638
     restart: always
     volumes:
       - './data:/opt/hub/data'
