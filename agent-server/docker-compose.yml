@@ -1,0 +1,12 @@
+version: '3'
+services:
+  agent-server:
+    image: 120011676/agent-server
+    restart: always
+    ports:
+      - "20000:8080"
+    networks:
+      - "dev"
+networks:
+  dev:
+    driver: bridge
