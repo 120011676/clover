@@ -1,0 +1,14 @@
+version: '3'
+services:
+  apache-ftpserver:
+    image: 120011676/apache-ftpserver
+    restart: always
+    volumes:
+      - './res:/opt/apache-ftpserver-1.2.0/res'
+    networks:
+      - dev
+    ports:
+      - '2121:2121'
+networks:
+  dev:
+    driver: bridge

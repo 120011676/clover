@@ -17,3 +17,4 @@
 /postgres/data/
 !scylla/scylla/data/.gitignore
 !scylla/scylla/commitlog/.gitignore
+/apache-ftpserver/res/log/ftpd.log

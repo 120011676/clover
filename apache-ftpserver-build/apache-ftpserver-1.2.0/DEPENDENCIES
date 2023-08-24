@@ -1,0 +1,49 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Apache FtpServer
+
+
+From: 'an unknown organization'
+  - AOP alliance (http://aopalliance.sourceforge.net) aopalliance:aopalliance:jar:1.0
+    License: Public Domain 
+
+From: 'Apache MINA Project' (https://mina.apache.org/)
+  - Apache MINA Core (https://mina.apache.org/mina-core/) org.apache.mina:mina-core:bundle:2.1.6
+    License: Apache 2.0 License  (https://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - JCL 1.2 implemented over SLF4J (http://www.slf4j.org) org.slf4j:jcl-over-slf4j:jar:1.7.36
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.7.36
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+  - SLF4J Reload4j Binding (http://reload4j.qos.ch) org.slf4j:slf4j-reload4j:jar:1.7.36
+    License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+From: 'QOS.CH Sarl (Switzerland)' (https://reload4j.qos.ch)
+  - reload4j (https://reload4j.qos.ch) ch.qos.reload4j:reload4j:jar:1.2.19
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'Spring Framework' (http://www.springframework.org/)
+  - Spring Framework: Beans (http://www.springframework.org) org.springframework:spring-beans:jar:2.5.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Framework: Context (http://www.springframework.org) org.springframework:spring-context:jar:2.5.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Spring Framework: Core (http://www.springframework.org) org.springframework:spring-core:jar:2.5.5
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+  - Apache Ftplet API (http://mina.apache.org/ftpserver) org.apache.ftpserver:ftplet-api:bundle:1.2.0
+    License: Apache 2.0 License  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Apache FtpServer Core (https://mina.apache.org/ftpserverproject/ftpserver-core) org.apache.ftpserver:ftpserver-core:bundle:1.2.0
+    License: Apache 2.0 License  (https://www.apache.org/licenses/LICENSE-2.0)
+  - Apache Log4j API (https://logging.apache.org/log4j/2.x/log4j-api/) org.apache.logging.log4j:log4j-api:jar:2.17.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Log4j Core (https://logging.apache.org/log4j/2.x/log4j-core/) org.apache.logging.log4j:log4j-core:jar:2.17.2
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

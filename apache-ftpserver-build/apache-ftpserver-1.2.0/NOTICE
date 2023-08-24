@@ -1,0 +1,65 @@
+// ------------------------------------------------------------------
+// NOTICE file corresponding to the section 4d of The Apache License,
+// Version 2.0, in this case for Apache FtpServer
+// ------------------------------------------------------------------
+
+Apache FtpServer
+Copyright 2003-2022 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+
+This product includes/uses software, AOP alliance (http://aopalliance.sourceforge.net)
+License: Public Domain 
+
+This product includes/uses software, reload4j (https://reload4j.qos.ch),
+developed by QOS.CH Sarl (Switzerland)  (https://reload4j.qos.ch)
+License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Apache Ftplet API (http://mina.apache.org/ftpserver),
+developed by The Apache Software Foundation  (https://www.apache.org/)
+License: Apache 2.0 License  (https://www.apache.org/licenses/LICENSE-2.0)
+
+This product includes/uses software, Apache FtpServer Core (https://mina.apache.org/ftpserverproject/ftpserver-core),
+developed by The Apache Software Foundation  (https://www.apache.org/)
+License: Apache 2.0 License  (https://www.apache.org/licenses/LICENSE-2.0)
+
+This product includes/uses software, Apache Log4j API (https://logging.apache.org/log4j/2.x/log4j-api/),
+developed by The Apache Software Foundation  (https://www.apache.org/)
+License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Apache Log4j Core (https://logging.apache.org/log4j/2.x/log4j-core/),
+developed by The Apache Software Foundation  (https://www.apache.org/)
+License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Apache MINA Core (https://mina.apache.org/mina-core/),
+developed by Apache MINA Project  (https://mina.apache.org/)
+License: Apache 2.0 License  (https://www.apache.org/licenses/LICENSE-2.0)
+
+This product includes/uses software, JCL 1.2 implemented over SLF4J (http://www.slf4j.org),
+developed by QOS.ch  (http://www.qos.ch)
+License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, SLF4J API Module (http://www.slf4j.org),
+developed by QOS.ch  (http://www.qos.ch)
+License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+This product includes/uses software, SLF4J Reload4j Binding (http://reload4j.qos.ch),
+developed by QOS.ch  (http://www.qos.ch)
+License: MIT License  (http://www.opensource.org/licenses/mit-license.php)
+
+This product includes/uses software, Spring Framework: Beans (http://www.springframework.org),
+developed by Spring Framework  (http://www.springframework.org/)
+License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Spring Framework: Context (http://www.springframework.org),
+developed by Spring Framework  (http://www.springframework.org/)
+License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+This product includes/uses software, Spring Framework: Core (http://www.springframework.org),
+developed by Spring Framework  (http://www.springframework.org/)
+License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
