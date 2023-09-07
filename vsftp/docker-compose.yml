@@ -4,7 +4,7 @@ services:
     image: fauria/vsftpd
     restart: always
     volumes:
-      - './vsftpd:/home/vsftpd'
+      - './data:/home/vsftpd'
     environment:
       - FTP_USER=ftp
       - FTP_PASS==[;._PL<0okm
