@@ -1,0 +1,22 @@
+version: "3"
+services:
+  vsftpd:
+    image: fauria/vsftpd
+    restart: always
+    volumes:
+      - './vsftpd:/home/vsftpd'
+    environment:
+      - FTP_USER=ftp
+      - FTP_PASS==[;._PL<0okm
+      - PASV_ADDRESS=192.168.8.9
+      - PASV_MIN_PORT=21100
+      - PASV_MAX_PORT=21110
+    ports:
+      - "20:20"
+      - "21:21"
+      - "21100-21110:21100-21110"
+    networks:
+      - dev
+networks:
+  dev:
+    driver: bridge
