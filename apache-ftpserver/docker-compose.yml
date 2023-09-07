@@ -9,6 +9,9 @@ services:
       - dev
     ports:
       - '2121:2121'
+      - '123:123'
+      - '124:124'
+      - '125:125'
 networks:
   dev:
     driver: bridge

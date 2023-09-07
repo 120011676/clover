@@ -6,4 +6,4 @@ RUN apk --update add tzdata && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime &
 COPY ./apache-ftpserver-1.2.0 /opt/apache-ftpserver-1.2.0
 WORKDIR /opt/apache-ftpserver-1.2.0
 EXPOSE 2121
-CMD sh bin/ftpd.sh res/conf/ftpd-typical.xml
+CMD sh bin/ftpd.sh res/conf/ftpd-full.xml
