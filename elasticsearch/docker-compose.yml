@@ -1,0 +1,15 @@
+version: "3"
+services:
+  elasticsearch:
+    image: elasticsearch
+    restart: always
+    environment:
+      - 'discovery.type=single-node'
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    networks:
+      - dev
+networks:
+  dev:
+    driver: bridge
