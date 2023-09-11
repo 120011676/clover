@@ -9,6 +9,8 @@ services:
       - LANG=en_US.UTF-8
       - ELASTIC_PASSWORD==[;._PL<0okm
       - KIBANA_PASSWORD==[;._PL<0okm
+#      - xpack.security.enabled=false
+#      - xpack.security.transport.ssl.enabled=false
     ports:
       - '9200:9200'
       - '9300:9300'
